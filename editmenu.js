@@ -19,16 +19,6 @@ function findAndDelete(el) {
 }
 document.addEventListener('DOMContentLoaded', function() {
     if (window.location.href.substring(langpos+2,langpos+3) === '/') document.children.forEach((el) => {findAndDelete(el)});
-}, false);
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.href.includes("ru")) document.querySelector("#header > div.header-announcement-bar-wrapper > div.header-inner.container--fluid.header-mobile-layout-logo-left-nav-right.header-layout-nav-left > div.header-display-desktop > div.header-actions.header-actions--right > div.header-actions-action.header-actions-action--cta > a").innerText = "Записаться на консультацию";
-}, false);
-
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.href.includes("ua")) document.querySelector("#header > div.header-announcement-bar-wrapper > div.header-inner.container--fluid.header-mobile-layout-logo-left-nav-right.header-layout-nav-left > div.header-display-desktop > div.header-actions.header-actions--right > div.header-actions-action.header-actions-action--cta > a").innerText = "Записатися на консультацію";
+    setTimeout(() => {if (window.location.href.includes("ru")) document.querySelector("#header > div.header-announcement-bar-wrapper > div.header-inner.container--fluid.header-mobile-layout-logo-left-nav-right.header-layout-nav-left > div.header-display-desktop > div.header-actions.header-actions--right > div.header-actions-action.header-actions-action--cta > a").innerText = "Записаться на консультацию";})
+    setTimeout(() => {if (window.location.href.includes("ua")) document.querySelector("#header > div.header-announcement-bar-wrapper > div.header-inner.container--fluid.header-mobile-layout-logo-left-nav-right.header-layout-nav-left > div.header-display-desktop > div.header-actions.header-actions--right > div.header-actions-action.header-actions-action--cta > a").innerText = "Записатися на консультацію";})
 }, false);
