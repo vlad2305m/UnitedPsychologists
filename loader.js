@@ -8,11 +8,11 @@ function findAndDelete(el) {
        var e = el.children[i];
        var nlang = e.children[0].text.toLowerCase();
        
-       if(nlang === lang) el.removeChild(e);
+       if(nlang === language) el.removeChild(e);
        
        else if(nlang.length === 2) e.children[0].setAttribute("href", '/' + nlang + window.location.href.substring(langpos+2));
        
-       else if(!(e.children[0].href.substring(langpos,langpos+2) === lang)) el.removeChild(e);
+       else if(!(e.children[0].href.substring(langpos,langpos+2) === language)) el.removeChild(e);
   }
 }
 
