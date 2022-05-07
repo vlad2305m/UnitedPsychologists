@@ -1,11 +1,11 @@
 const choices = [
-  ["Group 1"],
-  ["G2", "choice 1", "c2"],
-  ["G3", "c1", "c2", "c3"],
+  ["Group 1:"],
+  ["G2:", "choice 1", "c2"],
+  ["G3:", "c1", "c2", "c3"],
       ];
 const subtitleText = "Long cursive subtitle here...";
-const searchButtonText = "Search_text";
-const clearButtonText = "Clearr";
+const searchButtonText = "Search";
+const clearButtonText = "Clear";
 
 
 const masterContainer = "container2";
@@ -48,7 +48,6 @@ function generate(parent) {
      }
      var clrButton = document.createElement("div"); clrButton.setAttribute("class", choiceClearButton); form.appendChild(clrButton);
       var clrButtonb = document.createElement("a"); clrButtonb.setAttribute("href", "javascript:void(0);"); clrButtonb.setAttribute("class", choiceClearButtonLabel); clrButtonb.innerText = clearButtonText; clrButton.appendChild(clrButtonb);
-$(document).ready(function(){
   $(".submit_form").click(function(){
     var options = [];
     for (var i = 0; i < choices.length; i++) {
@@ -57,7 +56,7 @@ $(document).ready(function(){
     localStorage.setItem("matchingOptions", JSON.stringify(options));
 	window.location.replace("/team");
 });
-  $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); }); });
+  $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); });
   parent.appendChild(master);
 }
 
