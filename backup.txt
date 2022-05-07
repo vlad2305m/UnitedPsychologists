@@ -1,0 +1,12 @@
+<style>
+#header .header-nav-item:nth-child(4) {display:none}
+#header .header-nav-item:nth-child(5) {display:none}
+#header .header-nav-item:nth-child(6) {display:none}
+#header .header-nav-item:nth-child(7) {display:none}
+#header .header-nav-item:nth-child(8) {display:none}
+#header .header-nav-item:nth-child(9) {display:none}
+#header .header-nav-item:nth-child(10) {display:none}
+#header .header-nav-item:nth-child(11) {display:none}
+#header .header-nav-item:nth-child(12) {display:none}
+#header .header-nav-item:nth-child(13) {display:none}
+  </style>
