@@ -48,6 +48,7 @@ function generate(parent) {
      }
      var clrButton = document.createElement("div"); clrButton.setAttribute("class", choiceClearButton); form.appendChild(clrButton);
       var clrButtonb = document.createElement("a"); clrButtonb.setAttribute("href", "javascript:void(0);"); clrButtonb.setAttribute("class", choiceClearButtonLabel); clrButtonb.innerText = clearButtonText; clrButton.appendChild(clrButtonb);
+  parent.appendChild(master);
   $(".submit_form").click(function(){
     var options = [];
     for (var i = 0; i < choices.length; i++) {
@@ -57,7 +58,6 @@ function generate(parent) {
 	window.location.replace("/team");
 });
   $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); });
-  parent.appendChild(master);
 }
 
 
