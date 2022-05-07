@@ -8,7 +8,7 @@ function findAndDelete(el) {
        var e = el.children[i];
        var nlang = e.children[0].text.toLowerCase();
        
-       if(nlang.length === 2) e.children[0].setAttribute("href", '/' + nlang + window.location.href.substring(langpos+2));
+       if(nlang.length === 2 && !(nlang === language)) e.children[0].setAttribute("href", '/' + nlang + window.location.href.substring(langpos+2));
        
        else if(nlang === language || !(e.children[0].href.substring(langpos,langpos+2) === language)) e.style.display = "none";
   }
