@@ -1,0 +1,192 @@
+			*, ::after, ::before {
+				box-sizing: border-box;
+			}
+			*
+			{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+			}
+            div#yui_3_17_2_1_1622180280492_687 {
+              margin-top: 11px;
+          }
+          a#yui_3_17_2_1_1622180280492_686 {
+                color: #d4967d;
+                font-weight: 200;
+        }
+  			.new_btn {
+    margin-top: 20px;
+}
+  			.clr_btn_link {
+              background-color: #eae6e6;
+              color: #111;
+              border: 2px solid #d4967d;
+              position: relative;
+              overflow: hidden;
+              height: 40px;
+              width: fit-content;
+              line-height: 40px;
+              padding: 7px 12px;
+              font-size: 13px;
+          }
+  
+  			input.submit_form {
+    background: #d4967d;
+    color: #fff;
+    border: 0px solid;
+    padding: 10px 42px;
+    font-size: 17px;
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+}
+  			
+                      .container2 {
+				max-width: 1140px;
+				padding: 50px 35px;
+				margin: 0px auto;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.container2 .inner-box {
+				width: 100%;
+				box-sizing:border-box;
+				margin: 0px auto;
+			}
+			.container2 .row-box {
+				display:flex;display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				flex-direction:row;
+				flex-wrap:nowrap;
+			}
+				
+			
+			.form-radio .radio-button {
+				cursor: pointer;
+			}
+
+			.form-radio input[type=radio] {
+				box-sizing: border-box;
+				padding: 0;
+			}
+
+			.row-box .form-title {
+				flex: 1 1 25%;
+				display: flex;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				max-width:13%;
+			}
+			.row-box .form-radio {
+				display: flex;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				flex: 1 1 75%;
+				max-width:87%;
+				flex-wrap: wrap;
+			}
+			.row-box .form-title h4 {
+				color:#333;
+			}
+			.example {
+				padding: 0px 10px;
+			}
+			.form-radio .radio-button__input:checked ~ span.radio-button__label
+			{
+				color:#fff;
+			}
+			.form-radio {
+				display: flex;
+				align-items: center;
+			}
+			h4.preFade.fadeIn {
+				font-size: 15px;
+			}
+			.radio-button__input:checked ~ span {
+				background: #4472c4;
+			}
+			span.radio-button__label {
+				background-color: #eae6e6;
+				color: #111;
+				border: 2px solid #d4967d;
+				position: relative;
+				overflow: hidden;
+				height: 40px;
+				width: fit-content;
+				line-height: 40px;
+				padding: 10px 12px;
+				font-size:13px;
+			}
+			.form-radio .radio-button input {
+				position: absolute;
+				width: 100%;
+				height: 40px;
+				z-index: 9;
+				opacity: 0;
+				cursor:pointer;
+			}
+			label.radio-button {
+				position: relative;
+				overflow: hidden;
+			}
+			.column-divide {
+				margin-top:30px;
+			}
+			.form-radio .radio-button__input:hover ~ span.radio-button__label {
+				background-color: #d4967d !important;
+				color: #fff;
+				transition:all 0.2s ease-in;
+			}
+			
+			/*---------media queries------------*/
+			@media (max-width: 1199.98px) { }
+			
+			@media (max-width: 991.98px) {  }
+			
+				
+			@media (max-width: 767.98px) 
+			{ 
+				.container2 {padding: 50px 15px;}
+				.row-box .form-title {
+					flex: 1 1 35%;
+					max-width:35%;
+				}
+				.row-box .form-radio {
+					flex: 1 1 65%;
+					max-width:65%;
+					flex-wrap: wrap;
+				}
+			}
+			
+			@media (max-width: 575.98px) 
+			{ 
+				.container2 .row-box {
+					flex-direction:column;
+				}
+				.row-box .form-title {
+					margin-bottom:15px;
+					max-width:100%;
+					flex:1 1 100%;
+				}
+				.row-box .form-radio {
+					max-width:100%;
+					flex:1 1 100%;
+				}
+				.example {
+					width: 100%;
+					padding: 0;
+				}
+				span.radio-button__label {
+					width: 100%;
+					line-height: 36px;
+					text-align: center;
+					padding: 0px 12px;
+					display: inline-block;
+				}
+				
+			}
+			/*---------media queries----ends--------*/
