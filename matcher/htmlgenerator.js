@@ -23,7 +23,7 @@ const choiceClearButtonLabel = "clr_btn_link";
 const searchButtonc = "submit_form";
 
 var done = false;
-export function generate(parent) {
+function generate(parent) {
   if (done) return; done = true;
   var master = document.createElement("div"); master.setAttribute("class", masterContainer);
    var table = document.createElement("div"); table.setAttribute("class", optionsContainerc); master.appendChild(table);
