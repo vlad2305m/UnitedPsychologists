@@ -17,5 +17,5 @@ export function setAppointmentButtonText(language) {
       const newText = buttonText[language];
       if (button && newText) button.innerText = newText;
     });
-  }, 1000);
+  });
 }
