@@ -49,15 +49,15 @@ function generate(parent) {
      var clrButton = document.createElement("div"); clrButton.setAttribute("class", choiceClearButton); form.appendChild(clrButton);
       var clrButtonb = document.createElement("a"); clrButtonb.setAttribute("href", "javascript:void(0);"); clrButtonb.setAttribute("class", choiceClearButtonLabel); clrButtonb.innerText = clearButtonText; clrButton.appendChild(clrButtonb);
   parent.appendChild(master);
-  $(".submit_form").click(function(){
+  setTimeout(()=>{$(".submit_form").click(function(){
     var options = [];
     for (var i = 0; i < choices.length; i++) {
       options.push($("input[name=\"choice"+(i+1)+"\"]:checked").val());
     }
     localStorage.setItem("matchingOptions", JSON.stringify(options));
-	window.location.replace("/team");
+	// window.location.replace("/team");
 });
-  $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); });
+  $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); }); }, 1000);
 }
 
 
