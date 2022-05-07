@@ -13,8 +13,8 @@ const mobileSelector =
 export function setAppointmentButtonText(language) {
   setTimeout(() => {
     [desktopSelector, mobileSelector].forEach((selector) => {
-      button = document.querySelector(selector);
-      newText = buttonText[language];
+      const button = document.querySelector(selector);
+      const newText = buttonText[language];
       if (button && newText) button.innerText = newText;
     });
   }, 1000);
