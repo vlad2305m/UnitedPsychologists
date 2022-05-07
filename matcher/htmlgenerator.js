@@ -60,3 +60,11 @@ $(document).ready(function(){
   $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); }); });
   parent.appendChild(master);
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+$(document).ready(function(){
+$(".click_div").click(function(){
+    generate(document.getElementsByClassName("click_div")[0]);
+});});});
