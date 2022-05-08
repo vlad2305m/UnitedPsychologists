@@ -1,3 +1,19 @@
+.summary-title {
+  font-size: min(calc((4 - 1) * 1.2vh + 1rem), calc(65vw/13)) !important;
+  }
+.sqs-gallery-meta-container {
+  aspect-ratio: 1.4;
+  overflow-y: hidden;
+  transition: aspect-ratio 0.2s ease-out;
+}
+.summary-metadata-item--tags {
+  display: "none";
+}
+
+
+
+
+
 			*, ::after, ::before {
 				box-sizing: border-box;
 			}
