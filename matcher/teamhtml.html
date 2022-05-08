@@ -1,0 +1,20 @@
+<style>
+.summary-title {
+  font: min(calc((4 - 1) * 1.2vh + 1rem), calc(65vw/13));
+  }
+.sqs-gallery-meta-container {
+  aspect-ratio: 1.4;
+  overflow-y: hidden;
+  transition: aspect-ratio 0.2s ease-out;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+var coll = document.getElementsByClassName("sqs-gallery-meta-container");
+for (var i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.style.aspectRatio = "auto";
+  });
+}}, false);
+</script>
