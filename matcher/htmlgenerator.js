@@ -66,7 +66,7 @@ function generate(parent) {
 	  document.getElementsByClassName('summary-metadata-item--tags').forEach((e) => {
 		e.parentNode.parentNode.parentNode.parentNode.style.display = "unset";
 		var cat_data = JSON.parse(e.children[0].innerText);
-		for (var i in options) if (!isNaN(i) && !cat_data.contains(i)) e.parentNode.parentNode.parentNode.parentNode.style.display = "none";
+		for (var i in options) if (!(i === null) && !cat_data.contains(i)) e.parentNode.parentNode.parentNode.parentNode.style.display = "none";
 	  });
   });
   $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); }); }, 1000);
