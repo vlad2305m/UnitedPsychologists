@@ -7,7 +7,7 @@
   transition: aspect-ratio 0.2s ease-out;
 }
 .summary-metadata-item--tags {
-  display: "none";
+  display: none;
 }
 
 
