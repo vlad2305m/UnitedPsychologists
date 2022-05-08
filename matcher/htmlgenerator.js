@@ -68,7 +68,7 @@ function generate(parent) {
 		var cat_data = JSON.parse(e.children[0].innerText);
 		for (var i in options) if (!isNaN(i) && !cat_data.contains(i)) e.parentNode.parentNode.parentNode.parentNode.style.display = "none";
 	  });
-	  
+  });
   $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); }); }, 1000);
 }
 
