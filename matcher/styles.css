@@ -6,7 +6,7 @@
   overflow-y: hidden;
   transition: aspect-ratio 0.2s ease-out;
 }
-.summary-metadata-item--tags {
+.sqs-block-summary-v2 .summary-block-setting-primary-metadata-tags .summary-item-has-tags .summary-metadata--primary .summary-metadata-item--tags {
   display: none;
 }
 
