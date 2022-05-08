@@ -25,6 +25,7 @@ const searchButtonc = "submit_form";
 var done = false;
 function generate(parent) {
   if (done) return; done = true;
+  document.getElementsByClassName('summary-item-record-type-text').forEach((e) => {e.style.display = "none";});
   var master = document.createElement("div"); master.setAttribute("class", masterContainer);
    var table = document.createElement("div"); table.setAttribute("class", optionsContainerc); master.appendChild(table);
    var searchButtonContainer = document.createElement("div"); searchButtonContainer.setAttribute("class", rowContainer); master.appendChild(searchButtonContainer);
@@ -66,7 +67,7 @@ function generate(parent) {
 	  document.getElementsByClassName('summary-metadata-item--tags').forEach((e) => {
 		e.parentNode.parentNode.parentNode.parentNode.style.display = "unset";
 		var cat_data = JSON.parse(e.children[0].innerText);
-		options.forEach((i) => { console.log(i+" "+cat_data+" "+(!isNaN(i) && !cat_data.contains(i))); if (!isNaN(i) && !cat_data.contains(i)) e.parentNode.parentNode.parentNode.parentNode.style.display = "none";});
+		options.forEach((i) => { if (!isNaN(i) && !cat_data.contains(i)) e.parentNode.parentNode.parentNode.parentNode.style.display = "none";});
 	  });
   });
   $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); }); }, 1000);
@@ -85,6 +86,5 @@ for (var i = 0; i < coll.length; i++) {
 	
 $(document).ready(function(){
 $(".click_div").click(function(){
-    document.getElementsByClassName('summary-item-record-type-text').forEach((e) => {e.style.display = "none";});
     generate(document.getElementsByClassName("click_div")[0]);
 });});});
