@@ -46,7 +46,7 @@
               font-size: 13px;
           }
   
-  			input.submit_form {
+  			input.submit_form, fancy_button {
     background: #d4967d;
     color: #fff;
     border: 0px solid;
