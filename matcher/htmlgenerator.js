@@ -49,6 +49,13 @@ function generate(parent) {
      var clrButton = document.createElement("div"); clrButton.setAttribute("class", choiceClearButton); form.appendChild(clrButton);
       var clrButtonb = document.createElement("a"); clrButtonb.setAttribute("href", "javascript:void(0);"); clrButtonb.setAttribute("class", choiceClearButtonLabel); clrButtonb.innerText = clearButtonText; clrButton.appendChild(clrButtonb);
   parent.appendChild(master);
+	
+	
+	
+	
+	
+	
+	
   setTimeout(()=>{$(".submit_form").click(function(){
     var options = [];
     for (var i = 0; i < choices.length; i++) {
@@ -56,11 +63,10 @@ function generate(parent) {
     }
     console.log(JSON.stringify(options));
 	
-	  $('.summary-metadata-item--tags').each(function() {
-		var get_this = this;
-		$(get_this).parent().parent().parent().parent().style.display = "unset";
-		var cat_data = JSON.parse($(this).text());
-		for (var i : options) if (!isNaN(i) && !cat_data.contains(i)) $(get_this).parent().parent().parent().parent().style.display = "none";
+	  document.getElementsByClassName('summary-metadata-item--tags').forEach((e) => {
+		e.parentNode.parentNode.parentNode.parentNode.style.display = "unset";
+		var cat_data = JSON.parse(e.children[0].innerText);
+		for (var i in options) if (!isNaN(i) && !cat_data.contains(i)) e.parentNode.parentNode.parentNode.parentNode.style.display = "none";
 	  });
 });
   $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); }); }, 1000);
@@ -79,5 +85,6 @@ for (var i = 0; i < coll.length; i++) {
 	
 $(document).ready(function(){
 $(".click_div").click(function(){
+    document.getElementsByClassName('summary-item-record-type-text').forEach((e) => {e.style.display = "none";});
     generate(document.getElementsByClassName("click_div")[0]);
 });});});
