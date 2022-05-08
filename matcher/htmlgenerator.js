@@ -41,7 +41,7 @@ function generate(parent) {
            var optionContainer = document.createElement("div"); optionContainer.setAttribute("class", choiceOptionContainer); optionsContainer.appendChild(optionContainer);
             var buttonContainer = document.createElement("label"); buttonContainer.setAttribute("class", choiceOptionButtonContainer); optionContainer.appendChild(buttonContainer);
              var button = document.createElement("input"); button.setAttribute("type", "radio"); button.setAttribute("class", choiceOptionButton); 
-              button.setAttribute("id", "choice"+(i+1)+"-"+j); button.setAttribute("name", "choice"+(i+1)); button.setAttribute("value", (i+1)*64+j); buttonContainer.appendChild(button);
+              button.setAttribute("id", "choice"+(i+1)+"-"+j); button.setAttribute("name", "choice"+(i+1)); button.setAttribute("value", (i+1)*100+j); buttonContainer.appendChild(button);
              var buttonText = document.createElement("span"); buttonText.setAttribute("class", choiceOptionButtonLabel); 
               buttonText.innerText = choices[i][j]; buttonContainer.appendChild(buttonText);
          }
@@ -52,10 +52,16 @@ function generate(parent) {
   setTimeout(()=>{$(".submit_form").click(function(){
     var options = [];
     for (var i = 0; i < choices.length; i++) {
-      options.push($("input[name=\"choice"+(i+1)+"\"]:checked").val());
+      options.push(parseInt($("input[name=\"choice"+(i+1)+"\"]:checked").val()));
     }
-    localStorage.setItem("matchingOptions", JSON.stringify(options));
-	// window.location.replace("/team");
+    console.log(JSON.stringify(options));
+	
+	  $('.summary-metadata-item--tags').each(function() {
+		var get_this = this;
+		$(get_this).parent().parent().parent().parent().style.display = "unset";
+		var cat_data = JSON.parse($(this).text());
+		for (var i : options) if (!isNaN(i) && !cat_data.contains(i)) $(get_this).parent().parent().parent().parent().style.display = "none";
+	  });
 });
   $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); }); }, 1000);
 }
@@ -63,6 +69,14 @@ function generate(parent) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
+	
+var coll = document.getElementsByClassName("sqs-gallery-meta-container");
+for (var i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.style.aspectRatio = "auto";
+  });
+}
+	
 $(document).ready(function(){
 $(".click_div").click(function(){
     generate(document.getElementsByClassName("click_div")[0]);
