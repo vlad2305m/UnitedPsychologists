@@ -1,12 +1,30 @@
-const choices = [
-  ["Group 1:"],
-  ["G2:", "choice 1", "c2"],
-  ["G3:", "c1", "c2", "c3"],
-      ];
-const subtitleText = "Long cursive subtitle here...";
-const searchButtonText = "Search";
-const clearButtonText = "Clear";
+const choicesLang = {'ru': [
+  ["Язык консультирования:", "украинский", "русский"],
+  ["Предпочтительное время:", "утро (9-12)", "день (12-17)", "вечер (17-21)"],
+  ["Пол:", "мужчина", "женщина"],
+      ],
+		 'en': [
+   ["Language of counseling:", "Ukrainian", "Russian"],
+   ["Preferred time:", "morning (9-12)", "afternoon (12-17)", "evening (17-21)"],
+   ["Gender:", "male", "female"],
+       ],
+		 'ua': [
+   ["Мова консультування:", "українська", "російська"],
+   ["Переважний час:", "ранок (9-12)", "день (12-17)", "вечір (17-21)"],
+   ["Стать:", "чоловік", "жінка"],
+       ],
+		 'fr': [
+   ["Langue du conseil:", "Ukrainien", "Russe"],
+   ["Heure préférée:", "matin (9-12)", "après-midi (12-17)", "soir (17-21)"],
+   ["Genre:", "Homme", "Femme"],
+       ],
+		};
+const subtitleTextLang = {'en': "Long cursive subtitle here...", 'ru':".", 'ua':".", 'fr':"."};
+const searchButtonTextLang = {'en': "Search", 'ru':".", 'ua':".", 'fr':"."};
+const clearButtonTextLang = {'en': "Clear", 'ru':".", 'ua':".", 'fr':"."};
 
+const langpos = 29;
+var language = window.location.href.substring(langpos, langpos+2);
 
 const masterContainer = "container2";
 const optionsContainerc = "inner-box";
@@ -25,6 +43,10 @@ const searchButtonc = "submit_form";
 var done = false;
 function generate(parent) {
   if (done) return; done = true;
+	var choices = choicesLang.get(language);
+	var subtitleText = subtitleTextLang.get(language);
+	var searchButtonText = searchButtonTextLang.get(language);
+	var clearButtonText = clearButtonTextLang.get(language);
   document.getElementsByClassName('summary-item-record-type-text').forEach((e) => {e.style.display = "none";});
   var master = document.createElement("div"); master.setAttribute("class", masterContainer);
    var table = document.createElement("div"); table.setAttribute("class", optionsContainerc); master.appendChild(table);
