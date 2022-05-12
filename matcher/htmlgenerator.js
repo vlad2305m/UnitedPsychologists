@@ -43,10 +43,10 @@ const searchButtonc = "submit_form";
 var done = false;
 function generate(parent) {
   if (done) return; done = true;
-	var choices = choicesLang.get(language);
-	var subtitleText = subtitleTextLang.get(language);
-	var searchButtonText = searchButtonTextLang.get(language);
-	var clearButtonText = clearButtonTextLang.get(language);
+	var choices = choicesLang[language];
+	var subtitleText = subtitleTextLang[language];
+	var searchButtonText = searchButtonTextLang[language];
+	var clearButtonText = clearButtonTextLang[language];
   document.getElementsByClassName('summary-item-record-type-text').forEach((e) => {e.style.display = "none";});
   var master = document.createElement("div"); master.setAttribute("class", masterContainer);
    var table = document.createElement("div"); table.setAttribute("class", optionsContainerc); master.appendChild(table);
