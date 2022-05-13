@@ -1,0 +1,22 @@
+export var database = {
+'YuliaG':[302],
+'LarisaW':[302],
+'IrinaG':[302],
+'SergeyD':[301],
+'OlgaV':[302],
+'MariaL':[302],
+'NataliaE':[302],
+'AsyaE':[302],
+'MargaritaL':[302],
+'YuliaK':[302],
+'AnnaK':[302],
+'OlgaM':[302],
+'EvgeniaP':[302],
+'IrinaB':[302],
+'IrinaV':[302],
+'ElenaB':[302],
+'AlexanderV':[301],
+'AlexanderK':[301],
+'OlgaSh':[302],
+'IgorSh':[301]
+};
