@@ -1,3 +1,4 @@
+import { database } from 'https://vlad2305m.github.io/UnitedPsychologists/matcher/data.js';
 const choicesLang = {'ru': [
   ["Язык консультирования:", "украинский", "русский"],
   ["Предпочтительное время:", "утро (9-12)", "день (12-17)", "вечер (17-21)"],
@@ -88,7 +89,7 @@ function generate(parent) {
 	
 	  document.getElementsByClassName('summary-metadata-item--tags').forEach((e) => {
 		e.parentNode.parentNode.parentNode.parentNode.style.display = "unset";
-		var cat_data = JSON.parse(e.children[0].innerText);
+		var cat_data = database[e.children[0].innerText];
 		options.forEach((i) => { if (!isNaN(i) && !cat_data.contains(i)) e.parentNode.parentNode.parentNode.parentNode.style.display = "none";});
 	  });
   });
