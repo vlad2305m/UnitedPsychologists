@@ -62,7 +62,7 @@ function generate(parent) {
      for (var i = 0; i < choices.length; i++) {
        var group = document.createElement("div"); group.setAttribute("class", highRowContainer); form.appendChild(group);
         var groupTitle = document.createElement("div"); groupTitle.setAttribute("class", choiceGroupName); group.appendChild(groupTitle);
-         var groupTitleText = document.createElement("h4"); groupTitleText.innerText = choices[i][0]; groupTitle.appendChild(groupTitleText);
+         var groupTitleText = document.createElement("b"); groupTitleText.innerText = choices[i][0]; groupTitle.appendChild(groupTitleText);
         var optionsContainer = document.createElement("div"); optionsContainer.setAttribute("class", choiceOptionsContainer); group.appendChild(optionsContainer);
          for (var j = 1; j < choices[i].length; j++) {
            var optionContainer = document.createElement("div"); optionContainer.setAttribute("class", choiceOptionContainer); optionsContainer.appendChild(optionContainer);
