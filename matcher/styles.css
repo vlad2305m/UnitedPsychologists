@@ -94,7 +94,7 @@
 				display: -webkit-box;
 				display: -webkit-flex;
 				display: -ms-flexbox;
-				max-width:13%;
+				/*max-width:13%;*/
 			}
 			.row-box .form-radio {
 				display: flex;
