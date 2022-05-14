@@ -20,9 +20,12 @@ const choicesLang = {'ru': [
    ["Genre:", "Homme", "Femme"],
        ],
 		};
-const subtitleTextLang = {'en': "Long cursive subtitle here...", 'ru':".", 'ua':".", 'fr':"."};
-const searchButtonTextLang = {'en': "Search", 'ru':".", 'ua':".", 'fr':"."};
-const clearButtonTextLang = {'en': "Clear", 'ru':".", 'ua':".", 'fr':"."};
+const subtitleTextLang = {'en': "Please select from one or more rows with optional criteria below.", 
+			  'ru':"Выберите одну или несколько строк с дополнительными критериями ниже.", 
+			  'ua':"Виберіть один або кілька рядків із додатковими критеріями нижче.", 
+			  'fr':"Veuillez sélectionner une ou plusieurs lignes avec des critères facultatifs ci-dessous."};
+const searchButtonTextLang = {'en': "Search", 'ru':"Поиск", 'ua':"Пошук", 'fr':"Recherche"};
+const clearButtonTextLang = {'en': "Clear", 'ru':"Очистить", 'ua':"Очистити", 'fr':"Dégager"};
 
 const langpos = 29;
 var language = window.location.href.substring(langpos, langpos+2);
