@@ -1,3 +1,5 @@
 [psyhelpworld.com](psyhelpworld.com)
 
-   - 📄 [list.md](list.md)
+
+
+   - 📄 [list.md](https://vlad2305m.github.io/UnitedPsychologists/list.md)
