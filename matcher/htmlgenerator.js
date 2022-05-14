@@ -1,22 +1,22 @@
 import { database } from 'https://vlad2305m.github.io/UnitedPsychologists/matcher/data.js';
 const choicesLang = {'ru': [
-  ["Язык консультирования:", "украинский", "русский"],
-  ["Предпочтительное время:", "утро (9-12)", "день (12-17)", "вечер (17-21)"],
+  ["Язык консультирования:"/*, "украинский", "русский"*/],
+  ["Предпочтительное время:"/*, "утро (9-12)", "день (12-17)", "вечер (17-21)"*/],
   ["Пол:", "мужчина", "женщина"],
       ],
 		 'en': [
-   ["Language of counseling:", "Ukrainian", "Russian"],
-   ["Preferred time:", "morning (9-12)", "afternoon (12-17)", "evening (17-21)"],
+   ["Language of counseling:"/*, "Ukrainian", "Russian"*/],
+   ["Preferred time:"/*, "morning (9-12)", "afternoon (12-17)", "evening (17-21)"*/],
    ["Gender:", "male", "female"],
        ],
 		 'ua': [
-   ["Мова консультування:", "українська", "російська"],
-   ["Переважний час:", "ранок (9-12)", "день (12-17)", "вечір (17-21)"],
+   ["Мова консультування:"/*, "українська", "російська"*/],
+   ["Переважний час:"/*, "ранок (9-12)", "день (12-17)", "вечір (17-21)"*/],
    ["Стать:", "чоловік", "жінка"],
        ],
 		 'fr': [
-   ["Langue du conseil:", "Ukrainien", "Russe"],
-   ["Heure préférée:", "matin (9-12)", "après-midi (12-17)", "soir (17-21)"],
+   ["Langue du conseil:"/*, "Ukrainien", "Russe"*/],
+   ["Heure préférée:"/*, "matin (9-12)", "après-midi (12-17)", "soir (17-21)"*/],
    ["Genre:", "Homme", "Femme"],
        ],
 		};
