@@ -9,6 +9,5 @@
      - 📄 [data.js](matcher/data.js)
      - 📄 [htmlgenerator.js](matcher/htmlgenerator.js)
      - 📄 [styles.css](matcher/styles.css)
-     - 📄 [teamhtml.html](matcher/teamhtml.html)
    - 📄 [styles\_backup.txt](styles_backup.txt)
 
