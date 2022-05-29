@@ -11,13 +11,11 @@ const mobileSelector =
   "#header > div.header-menu.header-menu--folder-list > div.header-menu-nav > nav > div > div.header-menu-cta > a";
 
 export function setAppointmentButtonText(language) {
-  setTimeout(() => {
-    [desktopSelector, mobileSelector].forEach((selector) => {
-      const button = document.querySelector(selector);
-      if (language === "en" || language === "fr") button.style.display = "none";
-      if (language === "ua") button.setAttribute("href", "https://docs.google.com/forms/d/1O-clo5rnfEonxqyLiQSNFMUpOsJa9zg2HVdNdHWmyOc/viewform")
-      const newText = buttonText[language];
-      if (button && newText) button.innerText = newText;
-    });
+  [desktopSelector, mobileSelector].forEach((selector) => {
+    const button = document.querySelector(selector);
+    if (language === "en" || language === "fr") button.style.display = "none";
+    if (language === "ua") button.setAttribute("href", "https://docs.google.com/forms/d/1O-clo5rnfEonxqyLiQSNFMUpOsJa9zg2HVdNdHWmyOc/viewform")
+    const newText = buttonText[language];
+    if (button && newText) button.innerText = newText;
   });
 }
