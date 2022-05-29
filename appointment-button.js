@@ -10,7 +10,7 @@ const desktopSelector =
 const mobileSelector =
   "#header > div.header-menu.header-menu--folder-list > div.header-menu-nav > nav > div > div.header-menu-cta > a";
 
-export function setAppointmentButtonText(language) {
+function setAppointmentButtonText(language) {
   [desktopSelector, mobileSelector].forEach((selector) => {
     const button = document.querySelector(selector);
     if (language === "en" || language === "fr") button.style.display = "none";
@@ -19,3 +19,5 @@ export function setAppointmentButtonText(language) {
     if (button && newText) button.innerText = newText;
   });
 }
+
+export { setAppointmentButtonText };
