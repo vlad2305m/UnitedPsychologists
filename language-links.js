@@ -16,7 +16,7 @@ function addPageIntoLinks(navLinksList, currentLanguage, page) {
 function updateLanguageSelectorUrls(currentLanguage, currentPage) {
   if (currentLanguage && currentPage) {
     [desktopSelector, mobileSelector].forEach((selector) => {
-      navLinks = document.querySelector(selector);
+      const navLinks = document.querySelector(selector);
       if (navLinks) addPageIntoLinks(navLinks, currentLanguage, currentPage);
     });
   }
