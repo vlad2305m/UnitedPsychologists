@@ -20,11 +20,9 @@
   }
 
   const hideIndexes = itemsToHide[exceptThisLanguage];
-  console.log(hideIndexes);
   const styles = hideIndexes.map(i => {
     return `.header-nav-item:nth-child(${i}), .header-menu-nav-item:nth-child(${i}) {display: none}`
   }).join('\n');
 
-  console.log(styles);
   addStyle(styles);
 })();
