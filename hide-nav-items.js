@@ -1,8 +1,11 @@
-// Hides navigation elements leading to languages other than specified
+// Hides navigation elements leading to languages other than current
+// Add into <head> for better performance
 
-function hideNavItems(exceptLanguage) {
-  const languages = ['ru', 'ua', 'en', 'fr'];
-  if (languages.indexOf(exceptLanguage) < 0) return;
+(function() {
+  const supportedLanguages = ['ru', 'ua', 'en', 'fr'];
+  const languageMatch = window.location.href.match(/psyhelpworld.com\/(..)\//);
+  const currentLanguage = languageMatch && languageMatch[1];
+  if (supportedLanguages.indexOf(currentLanguage) < 0) return;
 
   function addStyle(styleString) {
     const style = document.createElement('style');
@@ -10,13 +13,13 @@ function hideNavItems(exceptLanguage) {
     document.head.append(style);
   }
 
-  const hideLanguages = languages.filter(lang => { return lang != exceptLanguage });
-  const styles = hideLanguages.map(lang => {
-    return `.header-nav-item--collection > [href*="/${lang}/"] {display: none}`
-  }).join('\n');
+  function hideNavItems(languages, exceptThisLanguage) {
+    const hideLanguages = languages.filter(lang => { return lang != exceptThisLanguage });
+    const styles = hideLanguages.map(lang => {
+      return `.header-nav-item--collection > [href*="/${lang}/"] {display: none}`
+    }).join('\n');
+    addStyle(styles);
+  }
 
-  addStyle(styles);
-}
-
-const languageMatch = window.location.href.match(/psyhelpworld.com\/(..)\//);
-hideNavItems(languageMatch && languageMatch[1]);
+  hideNavItems(supportedLanguages, currentLanguage);
+})();
