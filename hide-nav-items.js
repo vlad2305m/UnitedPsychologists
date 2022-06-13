@@ -7,7 +7,7 @@ function findAndDelete(el, language) {
        
        //if(nlang.length === 2 && !(nlang === language)) e.children[0].setAttribute("href", '/' + nlang + window.location.href.substring(langpos+2));
        
-       if(nlang === language || (nlang.length !== 2 && !(e.children[0].href.substring(langpos,langpos+2) === language))) e.style.display = "none");
+       if(nlang === language || (nlang.length !== 2 && !(e.children[0].href.substring(langpos,langpos+2) === language))) e.style.display = "none";
   }
 }
 
