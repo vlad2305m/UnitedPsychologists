@@ -13,9 +13,9 @@ hide_nav_items_lock = true;
       setAppointmentButtonText(currentLanguage);
       // make language links point to localized current page instead of /home
       updateLanguageSelectorUrls(currentLanguage, currentPage);
-      // hide navigation from other languages
-      hideNavItems(currentLanguage);
     }
+    // hide navigation from other languages
+    hideNavItems(currentLanguage);
     hide_nav_items_lock = false;
   }, false);
 })();
