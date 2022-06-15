@@ -5,7 +5,7 @@ function htmlToElement(html) {
     return template.content.children[0];
 }
 
-(function() {
+function transformLogo() {
   const container = document.querySelector("#header > div.header-announcement-bar-wrapper > div.header-inner.container--fluid.header-mobile-layout-logo-left-nav-right.header-layout-nav-left > div.header-display-desktop > div.header-title-nav-wrapper > div.header-title > div");
   container.style.display = "flex"; container.style.flexDirection = "column";
   const logo = container.children[0]; logo.style.height = 0; logo.style.pointerEvents = "none";
@@ -19,4 +19,5 @@ function htmlToElement(html) {
                           </svg>
                       </a>
   `));
-})();
+}
+export { transformLogo };
