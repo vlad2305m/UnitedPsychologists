@@ -20,11 +20,14 @@ function addPageIntoLinks(navLinksList, currentLanguage, page) {
     const linkLanguage = link.text.toLowerCase();
     const linkHref = "/" + linkLanguage + "/" + page;
     if (supportedLanguages.includes(linkLanguage) && linkLanguage !== currentLanguage)  {
-     if (UrlExists(linkHref))
-       link.setAttribute("href", linkHref);
-     else {
-       link.removeAttribute("href");
-     }
+      link.setAttribute("href", linkHref);
+      setTimeout(()=>{
+        if (!UrlExists(linkHref)) {
+          link.removeAttribute("href");
+          link.style.cursor = "default";
+          link.style.color = "lightgray";
+        }
+      })
     }
   });
 }
