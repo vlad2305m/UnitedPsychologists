@@ -4,12 +4,28 @@ const desktopSelector =
 const mobileSelector =
   "#header > div.header-menu.header-menu--folder-list > div.header-menu-nav > nav > div > div.header-menu-nav-folder-content";
 
+function UrlExists(url) {
+        var http = new XMLHttpRequest();
+        http.open('HEAD', url, false);
+        http.send();
+        if (http.status != 404)
+            return true;
+        else
+            return false;
+    }
+
 function addPageIntoLinks(navLinksList, currentLanguage, page) {
   navLinksList.children.forEach((child) => {
     const link = child.children[0];
     const linkLanguage = link.text.toLowerCase();
-    if (supportedLanguages.includes(linkLanguage) && linkLanguage !== currentLanguage)
-      link.setAttribute("href", "/" + linkLanguage + "/" + page);
+    const linkHref = "/" + linkLanguage + "/" + page;
+    if (supportedLanguages.includes(linkLanguage) && linkLanguage !== currentLanguage)  {
+     if (UrlExists(linkHref))
+       link.setAttribute("href", linkHref);
+     else {
+       link.removeAttribute("href");
+     }
+    }
   });
 }
 
