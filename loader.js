@@ -1,6 +1,7 @@
 import { setAppointmentButtonText } from 'https://vlad2305m.github.io/UnitedPsychologists/menu/appointment-button.js';
 import { updateLanguageSelectorUrls } from 'https://vlad2305m.github.io/UnitedPsychologists/menu/language-links.js';
 import { hideNavItems } from 'https://vlad2305m.github.io/UnitedPsychologists/menu/hide-nav-items.js';
+import { transformLogo } from 'https://vlad2305m.github.io/UnitedPsychologists/menu/logo-button.js';
 hide_nav_items_lock = true;
 (function() {
   const languageMatch = window.location.href.match(/psyhelpworld.com\/(..)\/(.*)$/);
@@ -17,5 +18,6 @@ hide_nav_items_lock = true;
     // hide navigation from other languages
     hideNavItems(currentLanguage);
     hide_nav_items_lock = false;
+    transformLogo();
   }, false);
 })();
