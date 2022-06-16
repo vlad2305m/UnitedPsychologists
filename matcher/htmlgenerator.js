@@ -94,10 +94,11 @@ function generate(parent) {
     }
     console.log(options);
 	
-	  document.getElementsByClassName('summary-metadata-item--tags').forEach((e) => {
-		e.parentNode.parentNode.parentNode.parentNode.style.display = "unset";
-		var cat_data = database[e.children[0].innerText];
-		options.forEach((i) => { if (!isNaN(i) && !cat_data.contains(i)) e.parentNode.parentNode.parentNode.parentNode.style.display = "none";});
+	  document.getElementsByClassName('summary-title').forEach((e) => {
+		const record = e.parentNode.parentNode;
+		record.style.display = "unset";
+		var cat_data = database[e.children[0].href.substring(39)];
+		options.forEach((i) => { if (!isNaN(i) && !cat_data.contains(i)) record.style.display = "none";});
 	  });
   });
   $(".clr_btn_link").click(function(){ $('.radio-button__input').prop('checked', false); }); }, 1000);
