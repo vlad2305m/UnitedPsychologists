@@ -1,7 +1,5 @@
 - 📂 __UnitedPsychologists__
    - 📄 [README.md](README.md)
-   - 📄 [appointment\-button.js](appointment-button.js)
-   - 📄 [hide\-nav\-items.js](hide-nav-items.js)
    - 📄 [list.md](list.md)
    - 📄 [loader.js](loader.js)
    - 📂 __matcher__
@@ -9,5 +7,9 @@
      - 📄 [data.js](matcher/data.js)
      - 📄 [htmlgenerator.js](matcher/htmlgenerator.js)
      - 📄 [styles.css](matcher/styles.css)
-   - 📄 [styles\_backup.txt](styles_backup.txt)
+   - 📂 __menu__
+     - 📄 [appointment\-button.js](menu/appointment-button.js)
+     - 📄 [hide\-nav\-items.js](menu/hide-nav-items.js)
+     - 📄 [language\-links.js](menu/language-links.js)
+     - 📄 [logo\-button.js](menu/logo-button.js)
 
