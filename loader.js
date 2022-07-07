@@ -23,8 +23,8 @@ hide_nav_items_lock = true;
     // Squash section background
     if (!sqDevEnv) {
       const img = document.querySelector("#sections > section.page-section.layout-engine-section.background-width--full-bleed.section-height--custom.horizontal-alignment--left.vertical-alignment--middle.has-background.black > div > img").parentElement.parentElement;
-      //img.style.minHeight = 0;
-      //img.children[1].style.display = "none";
+      img.style.minHeight = 0;
+      img.children[1].style.display = "none";
     }
   }, false);
 })();
