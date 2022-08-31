@@ -1,4 +1,5 @@
 import { setAppointmentButtonText } from 'https://vlad2305m.github.io/UnitedPsychologists/menu/appointment-button.js';
+import { setFeedbackButtonText } from 'https://vlad2305m.github.io/UnitedPsychologists/menu/feedback-button.js';
 import { updateLanguageSelectorUrls } from 'https://vlad2305m.github.io/UnitedPsychologists/menu/language-links.js';
 import { hideNavItems } from 'https://vlad2305m.github.io/UnitedPsychologists/menu/hide-nav-items.js';
 import { transformLogo } from 'https://vlad2305m.github.io/UnitedPsychologists/menu/logo-button.js';
@@ -13,6 +14,8 @@ hide_nav_items_lock = true;
     if (currentLanguage) {
       // language-aware appointment button and its link
       setAppointmentButtonText(currentLanguage);
+      // language-aware feedback button and its link
+      setFeedbackButtonText(currentLanguage);
       // make language links point to localized current page instead of /home
       updateLanguageSelectorUrls(currentLanguage, currentPage);
     }
