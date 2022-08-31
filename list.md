@@ -9,6 +9,7 @@
      - 📄 [styles.css](matcher/styles.css)
    - 📂 __menu__
      - 📄 [appointment\-button.js](menu/appointment-button.js)
+     - 📄 [feedback\-button.js](menu/feedback-button.js)
      - 📄 [hide\-nav\-items.js](menu/hide-nav-items.js)
      - 📄 [language\-links.js](menu/language-links.js)
      - 📄 [logo\-button.js](menu/logo-button.js)
