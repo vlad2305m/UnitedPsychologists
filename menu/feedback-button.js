@@ -16,12 +16,12 @@ const mobileSelector =
 function setFeedbackButtonText(language) {
   [desktopSelector].forEach((selector) => {
     const buttonDiv = document.querySelector(selector);
-    const langSupported = currentLanguage in buttonActionsPerLanguage;
+    const langSupported = language in buttonActionsPerLanguage;
     if (!langSupported) {
         buttonDiv.style.display = "none";
     }
     const button = document.querySelector(selector + " div.sqs-block-button-container--center > a.sqs-block-button-element");
-    let buttonSettings = buttonActionsPerLanguage[currentLanguage];
+    let buttonSettings = buttonActionsPerLanguage[language];
     if (language === "en" || language === "fr") button.style.display = "none";
     button.setAttribute('href', buttonSettings['link']);
     button.innerText = buttonSettings['text'];
