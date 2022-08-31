@@ -19,6 +19,7 @@ function setFeedbackButtonText(language) {
     const langSupported = language in buttonActionsPerLanguage;
     if (!langSupported) {
         buttonDiv.style.display = "none";
+            return;
     }
     const button = document.querySelector(selector + " div.sqs-block-button-container--center > a.sqs-block-button-element");
     let buttonSettings = buttonActionsPerLanguage[language];
