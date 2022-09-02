@@ -14,7 +14,7 @@ function setAppointmentButtonText(language) {
   [desktopSelector, mobileSelector].forEach((selector) => {
     const button = document.querySelector(selector);
     if (language === "en" || language === "fr") button.style.display = "none";
-    if (language === "ua") button.setAttribute("href", "https://docs.google.com/forms/d/1O-clo5rnfEonxqyLiQSNFMUpOsJa9zg2HVdNdHWmyOc/viewform")
+    if (language === "ua") button.setAttribute("href", "https://forms.gle/PrSxZjkyuGxLspHG7")
     const newText = buttonText[language];
     if (button && newText) button.innerText = newText;
   });
