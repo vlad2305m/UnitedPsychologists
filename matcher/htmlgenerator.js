@@ -98,6 +98,7 @@ function generate(parent) {
 		const record = e.parentNode.parentNode;
 		record.style.display = "unset";
 		var cat_data = database[e.children[0].href.substring(39)];
+		if (!cat_data) console.log("Please set filters for "+e.children[0].href.substring(39));
 		options.forEach((i) => { if (!isNaN(i) && (!cat_data || !cat_data.contains(i))) record.style.display = "none";});
 	  });
   });
