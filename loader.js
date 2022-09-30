@@ -29,7 +29,7 @@ hide_nav_items_lock = true;
     transformLogo();
     // Squash section background
     if (!sqDevEnv) {
-      const imgcc = document.querySelector("#sections > section.page-section.layout-engine-section.background-width--full-bleed.section-height--custom.horizontal-alignment--left.vertical-alignment--middle.has-background.black > div > div > img");
+      var imgcc = document.querySelector("#sections > section.page-section.layout-engine-section.background-width--full-bleed.section-height--custom.horizontal-alignment--left.vertical-alignment--middle.has-background.black > div > div > img");
       if (imgcc){
         const img = imgcc.parentElement.parentElement.parentElement;
         img.style.minHeight = 0;
