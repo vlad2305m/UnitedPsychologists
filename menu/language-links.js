@@ -15,7 +15,7 @@ function UrlExists(url) {
     }
 
 function addPageIntoLinks(navLinksList, currentLanguage, page) {
-  for(var i in navLinksList.children) {
+  for(var i = 0; i < navLinksList.children.length; i++) {
     const child = navLinksList.children[i];
     const link = child.children[0];
     const linkLanguage = link.text.toLowerCase();
