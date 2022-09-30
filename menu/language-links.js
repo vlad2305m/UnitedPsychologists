@@ -15,8 +15,7 @@ function UrlExists(url) {
     }
 
 function addPageIntoLinks(navLinksList, currentLanguage, page) {
-  console.log(navLinksList);
-  navLinksList.children.forEach((child) => {
+  for(const chind in navLinksList.children) {
     const link = child.children[0];
     const linkLanguage = link.text.toLowerCase();
     const linkHref = "/" + linkLanguage + "/" + page;
@@ -30,7 +29,7 @@ function addPageIntoLinks(navLinksList, currentLanguage, page) {
         }
       })
     }
-  });
+  };
 }
 
 function updateLanguageSelectorUrls(currentLanguage, currentPage) {
