@@ -25,9 +25,12 @@ hide_nav_items_lock = true;
     transformLogo();
     // Squash section background
     if (!sqDevEnv) {
-      const img = document.querySelector("#sections > section.page-section.layout-engine-section.background-width--full-bleed.section-height--custom.horizontal-alignment--left.vertical-alignment--middle.has-background.black > div > img").parentElement.parentElement;
-      img.style.minHeight = 0;
-      img.children[1].style.display = "none";
+      const imgcc = document.querySelector("#sections > section.page-section.layout-engine-section.background-width--full-bleed.section-height--custom.horizontal-alignment--left.vertical-alignment--middle.has-background.black > div > img");
+      if (imgcc){
+        const img = imgcc.parentElement.parentElement;
+        img.style.minHeight = 0;
+        img.children[1].style.display = "none";
+      }
     }
   }, false);
 })();
