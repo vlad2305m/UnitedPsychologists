@@ -22,6 +22,10 @@ hide_nav_items_lock = true;
     // hide navigation from other languages
     hideNavItems(currentLanguage);
     hide_nav_items_lock = false;
+    //Show menu faster
+    const headerNavigationSelector = "#header > div.header-announcement-bar-wrapper > div.header-inner.container--fluid.header-mobile-layout-logo-left-nav-right.header-layout-nav-left > div.header-display-desktop > div.header-title-nav-wrapper > div.header-nav > div > nav";
+    document.querySelector(headerNavigationSelector).style.display = "inline-flex";
+    
     transformLogo();
     // Squash section background
     if (!sqDevEnv) {
