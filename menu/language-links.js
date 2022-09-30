@@ -15,6 +15,7 @@ function UrlExists(url) {
     }
 
 function addPageIntoLinks(navLinksList, currentLanguage, page) {
+  console.print(navLinksList);
   navLinksList.children.forEach((child) => {
     const link = child.children[0];
     const linkLanguage = link.text.toLowerCase();
@@ -36,7 +37,7 @@ function updateLanguageSelectorUrls(currentLanguage, currentPage) {
   if (currentLanguage && currentPage) {
     [desktopSelector, mobileSelector].forEach((selector) => {
       const navLinks = document.querySelector(selector);
-      //if (navLinks) addPageIntoLinks(navLinks, currentLanguage, currentPage);
+      if (navLinks) addPageIntoLinks(navLinks, currentLanguage, currentPage);
     });
   }
 }
