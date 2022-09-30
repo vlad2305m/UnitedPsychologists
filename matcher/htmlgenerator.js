@@ -55,7 +55,7 @@ function generate(parent) {
 	var subtitleText = subtitleTextLang[language];
 	var searchButtonText = searchButtonTextLang[language];
 	var clearButtonText = clearButtonTextLang[language];
-  document.getElementsByClassName('summary-item-record-type-text').forEach((e) => {e.style.display = "none";});
+  [...document.getElementsByClassName('summary-item-record-type-text')].forEach((e) => {e.style.display = "none";});
   var master = document.createElement("div"); master.setAttribute("class", masterContainer);
    var table = document.createElement("div"); table.setAttribute("class", optionsContainerc); master.appendChild(table);
    var searchButtonContainer = document.createElement("div"); searchButtonContainer.setAttribute("class", rowContainer); master.appendChild(searchButtonContainer);
