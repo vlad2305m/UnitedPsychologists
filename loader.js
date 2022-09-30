@@ -16,8 +16,6 @@ hide_nav_items_lock = true;
       setAppointmentButtonText(currentLanguage);
       // language-aware feedback button and its link
       setFeedbackButtonText(currentLanguage);
-      // make language links point to localized current page instead of /home
-      updateLanguageSelectorUrls(currentLanguage, currentPage);
     }
     // hide navigation from other languages
     hideNavItems(currentLanguage);
@@ -41,6 +39,10 @@ hide_nav_items_lock = true;
         img.style.minHeight = 0;
         img.children[1].style.display = "none";
       }
+    }
+    if (currentLanguage) {
+      // make language links point to localized current page instead of /home
+      updateLanguageSelectorUrls(currentLanguage, currentPage);
     }
   }, false);
 })();
