@@ -14,7 +14,7 @@ function setAppointmentButtonText(language) {
   [desktopSelector, mobileSelector].forEach((selector) => {
     const button = document.querySelector(selector);
     if (language === "en" || language === "fr") button.style.display = "none";
-    if (language === "ua") button.setAttribute("href", "https://forms.gle/PrSxZjkyuGxLspHG7")
+    /*if (language === "ua")*/ button.setAttribute("href", "https://widget.easyweek.io/psychologists-of-the-world/31662/"/*"https://forms.gle/PrSxZjkyuGxLspHG7"*/)
     const newText = buttonText[language];
     if (button && newText) button.innerText = newText;
   });
