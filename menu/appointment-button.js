@@ -14,9 +14,9 @@ function setAppointmentButtonText(language) {
   [desktopSelector, mobileSelector].forEach((selector) => {
     const button = document.querySelector(selector);
     if (language === "en" || language === "fr") button.style.display = "none";
-    if (false) {
-      if (language === "ua") button.setAttribute("href", "https://forms.gle/mz2rwQH9b34n4YMC8");
-      if (language === "ru") button.setAttribute("href", "https://forms.gle/ewdVMmx1xm546q2w5");
+    if (true) { // link override switch
+      if (language === "ua") button.setAttribute("href", "https://forms.gle/dGGaj94QCfdsJQwN9");
+      if (language === "ru") button.setAttribute("href", "https://forms.gle/BEJQykcc1A9fUB6j6");
     } else
     /*if (language === "ua")*/ button.setAttribute("href", "https://widget.easyweek.io/psychologists-of-the-world/31662/"/*"https://forms.gle/PrSxZjkyuGxLspHG7"*/);
     const newText = buttonText[language];
